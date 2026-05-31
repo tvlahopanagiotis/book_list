@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Reading Editions</title>
+<title>The Reading List</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Lora:ital@0;1&display=swap" rel="stylesheet" />
 <style>
@@ -17,6 +17,15 @@
   h1 { font-family:'Oswald',sans-serif; font-weight:600; font-size:clamp(34px,7vw,58px); letter-spacing:1px; text-transform:uppercase; line-height:.95; margin:6px 0; }
   .deck { font-style:italic; color:#5a4f3c; font-size:16px; }
   hr.r { border:none; border-top:2px solid var(--ink); max-width:120px; margin:16px auto; }
+  .analysis { max-width:620px; margin:18px auto 4px; border-top:1px solid rgba(28,26,23,.25); border-bottom:1px solid rgba(28,26,23,.25); }
+  .analysis summary { list-style:none; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; padding:12px 0; font-family:'Oswald',sans-serif; font-size:12px; letter-spacing:2px; text-transform:uppercase; color:#6b5f4a; }
+  .analysis summary::-webkit-details-marker { display:none; }
+  .analysis summary .arw { transition:transform .2s ease; font-size:10px; }
+  .analysis[open] summary .arw { transform:rotate(90deg); }
+  .analysis .prose { padding:4px 6px 20px; }
+  .analysis .prose p { font-family:'Lora',serif; font-size:16px; line-height:1.7; color:#3a342a; margin-bottom:14px; }
+  .analysis .prose p:last-child { margin-bottom:0; }
+  .analysis .prose strong { font-weight:600; color:#1c1a17; }
   .tabs { display:flex; justify-content:center; gap:0; margin:20px 0; }
   .tab { font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:2px; text-transform:uppercase; background:var(--band); border:2px solid var(--ink); border-right:none; padding:9px 20px; cursor:pointer; color:#6b5f4a; }
   .tab:last-child { border-right:2px solid var(--ink); }
@@ -71,11 +80,19 @@
 <body>
 <div class="wrap">
   <div class="masthead">
-    <div class="pub">Personal Editions &middot; No. 1</div>
-    <h1>Reading<br>Editions</h1>
+    <div class="pub">A Personal Library</div>
+    <h1>The Reading<br>List</h1>
     <hr class="r" />
     <p class="deck">One hundred eleven titles, ranked by taste</p>
   </div>
+  <details class="analysis">
+    <summary><span class="arw">&#9654;</span> What this list says about my taste</summary>
+    <div class="prose">
+      <p>If there is a single thread running through everything I rate highly, it is that the author has something to say and says it with precision. My five-star shelf is not a list of comfortable books. It is Dostoevsky on guilt, Taleb on fragility, de Mesquita on the cold arithmetic of political power, Berger on how we have been taught to see. These are books that demand something from the reader and repay the effort by changing how I think. The common enemy, the thing that reliably earns a one or a two, is a book that mistakes accessibility for intelligence, or warmth for substance.</p>
+      <p>Two preoccupations show up again and again. The first is <strong>power and how institutions actually work</strong>, the machinery underneath the surface of events, which runs from The Dictator's Handbook and Why Nations Fail straight through to the histories of totalitarianism stacking up on my to-read list. The second is <strong>psychological realism</strong>, characters under genuine moral pressure, internal contradiction, no easy resolution. When a novel takes interiority seriously, as Ishiguro and Ferrante and Kazantzakis do, it lands. When it leans on atmosphere or style as the main event, it tends not to.</p>
+      <p>I am also, it turns out, a tough grader over time. A book can impress on the first read and still lose a star once it settles, if what it leaves behind is thinner than the experience promised. Durability is part of the verdict, not just the initial hit. And there is a clear split by format worth naming: the dense, argument-driven books I love most are the ones I least want in my ears, while narrative, voice, and momentum are what make a book work as an audiobook. The list keeps those two judgments separate on purpose.</p>
+    </div>
+  </details>
   <div class="tabs">
     <button class="tab active" data-view="shelf">The Shelf</button>
     <button class="tab" data-view="cull">Up for Removal</button>
